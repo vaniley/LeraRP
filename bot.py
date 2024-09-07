@@ -15,7 +15,7 @@ import json
 DEFAULT_CONFIG = {
     "rolePrompt": "You are a helpful assistant.",
     "startMessage": "Hi! How can I help you?",
-    "nameVariants": ["Lera"],
+    "nameVariants": ["gpt"],
     "stickers": [],
     "openAIBaseUrl": "https://api.openai.com/v1",
     "openAIKey": "YOUR_OPENAI_API_KEY",
