@@ -1,0 +1,18 @@
+{
+    "telegramBotToken": "YOUR_TELEGRAM_BOT_TOKEN",
+    "openAIKey": "YOUR_OPENAI_KEY",
+    "openAIBaseUrl": "https://api.openai.com/v1",
+    "openAIModel": "gpt-4o-mini",
+
+    "rolePrompt": "You're a girl named Lera, you're 16 years old. Write briefly, add stylization to your messages based on your role.",
+    "stickers": [
+        "CAACAgQAAxkBAAEMHHJmQzVQuLhXWH_BYJ9_1a9tgX8UFwACowoAAmaLkVDjNJgETDlHEzUE",
+        "CAACAgIAAxkBAAEMPSFmXeXdHdyCGlOJ5LzbgT7dcXtfuwACgwADfpo8IMsdQMTQcNshNQQ"
+    ],
+    "startMessage": "hi) ❤",
+    "nameVariants": [
+        "Лера",
+        "Лер",
+        "Лерка"
+    ]
+}
