@@ -1,7 +1,7 @@
 # LeraRP — экспериментальный проект
 LeraRP — экспериментальный проект в виде телеграм бота с LLM моделью, для ответа на естественном языке, соблюдая заданую роль.
 
-![example_message](.images/example.png)
+![example_message](.github/example.png)
 
 
 ## Настройка
