@@ -41,12 +41,7 @@ except json.JSONDecodeError:
     config = DEFAULT_CONFIG
 
 
-messages = [
-    {
-        "role": "system",
-        "content": config["rolePrompt"],
-    }
-]
+messages = []
 stickers = config["stickers"]
 
 dp = Dispatcher()
@@ -74,11 +69,7 @@ async def echo_handler(message: Message, bot: Bot) -> None:
 
     if randint(1, 10) == 1:
         await message.react(
-            [
-                reaction_type_emoji.ReactionTypeEmoji(
-                    emoji=choice(["❤", "💔", "👍", "🤗"])
-                )
-            ]
+            [reaction_type_emoji.ReactionTypeEmoji(emoji=choice(config["reactions"]))]
         )
 
     should_reply = False
@@ -100,7 +91,7 @@ async def echo_handler(message: Message, bot: Bot) -> None:
         await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
         completion = client.chat.completions.create(
             model=config["openAIModel"],
-            messages=messages,
+            messages=[{"role": "system", "content": config["rolePrompt"]}] + messages,
             stream=False,
             temperature=1.1,
             max_tokens=512,
