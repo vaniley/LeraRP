@@ -115,7 +115,7 @@ async def echo_handler(message: Message, bot: Bot) -> None:
 async def main() -> None:
     bot = Bot(
         token=config["telegramBotToken"],
-        default=DefaultBotProperties(parse_mode=ParseMode.HTML),
+        default=DefaultBotProperties(parse_mode=ParseMode.MARKDOWN),
     )
     await dp.start_polling(bot)
 
